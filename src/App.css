@@ -1,38 +1,148 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  font-family: "Space Mono", monospace;
+  color: #4A4A4A;
+  background-color: #FFCD38;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  order: 2;
+  margin-top: 0;
+  margin-bottom: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.help-button {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 10px 10px #646464;
+  background-color: #ffeeb4;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 10px 10px #646464;
+  background-color: #ffeeb4;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.help-button.active {
+  box-shadow: none;
+}
+
+.help-button:hover {
+  box-shadow: 7px 7px #646464;
+}
+
+.help-button i {
+  font-size: 2.5em;
+}
+
+i {
+  font-style: italic;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-panels {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 10%;
+  height: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.text-panel-left {
+  resize: none;
+  outline: none;
+  overflow-x: hidden;
+  font-family: "Space Mono", monospace;
+  font-size: 0.95em;
+  color: #4A4A4A;
+  border: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-panel-right {
+  font-size: 0.95em;
+  overflow: auto;
+}
+
+.text-panel-left, .text-panel-right {
+  width: 45%;
+  height: 100%;
+  padding: 10px;
+  box-shadow: 10px 10px #646464;
+  background-color: #FFDD67;
+}
+
+textarea {
+  writing-mode: horizontal-tb !important;
+  font-family: monospace;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  column-count: initial !important;
+  margin: 0em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  padding: 2px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+footer {
+  display: block;
 }
